@@ -5,13 +5,13 @@ function Home() {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    fetch("/restaurants")
+    fetch("http://localhost:5555/restaurants")
       .then((r) => r.json())
       .then(setRestaurants);
   }, []);
 
   function handleDelete(id) {
-    fetch(`/restaurants/${id}`, {
+    fetch(`http://localhost:5555/restaurants/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {
@@ -27,7 +27,7 @@ function Home() {
       {restaurants.map((restaurant) => (
         <div key={restaurant.id} className="card">
           <h2>
-            <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
+            <Link to={`http://localhost:5555/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
           </h2>
           <p>Address: {restaurant.address}</p>
           <button onClick={() => handleDelete(restaurant.id)}>Delete</button>

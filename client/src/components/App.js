@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <Switch>
-        <Route exact path="/restaurants/:id">
+        <Route exact path="restaurants/:id">
           <Restaurant />
         </Route>
         <Route exact path="/">
