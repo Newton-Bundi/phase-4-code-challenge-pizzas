@@ -11,6 +11,7 @@ flask-restful = "0.3.9"
 pytest = "*"
 faker = "*"
 sqlalchemy-serializer = "1.4.1"
+flask-cors = "3.0.10"
 
 [requires]
 python_version = "3.8.13"

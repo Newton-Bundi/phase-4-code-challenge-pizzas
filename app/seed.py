@@ -17,8 +17,8 @@ with app.app_context():
     restaurants = []
     for i in range(50):
         restaurant = Restaurant(
-            name = fake.text(max_nb_chars=20),
-            address = fake.text(max_nb_chars=10),
+            name = fake.text(max_nb_chars=10),
+            address = fake.address(),
         )
         restaurants.append(restaurant)
 
@@ -27,7 +27,7 @@ with app.app_context():
     pizzas = []
     for i in range(40):
         pizza = Pizza(
-            name = fake.text(max_nb_chars=20),
+            name = fake.name(),
             ingredients = fake.text(max_nb_chars=10),
         )
         pizzas.append(pizza)
